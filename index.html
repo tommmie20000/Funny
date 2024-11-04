@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hacking Text Effect</title>
   <style>
-    body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #1e1e1e; color: #00ff00; font-family: monospace; font-size: 48px; }
+    body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #1e1e1e; color: #00ff00; font-family: monospace; font-size: 24px; }
     #cat-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('porsche.jpg'); /* Replace with your cat2.webp path */
+        background-image: url('cat2.webp'); /* Replace with your cat2.webp path */
         background-size: cover;
         background-position: center;
         z-index: 1000;
@@ -40,7 +40,7 @@
       }).join("");
 
       if (iterations < targetText.length) {
-        iterations += 1 / 12;  // Adjust speed here
+        iterations += 1 / 10;  // Adjust speed here
         requestAnimationFrame(hackEffect);
       }
     }
@@ -69,7 +69,7 @@
 
     // Random interval for the flash between 0 to 5 seconds
     function randomFlashInterval() {
-        const randomTime = Math.floor(Math.random() * 6000); // Random between 0 to 5 seconds
+        const randomTime = Math.floor(Math.random() * 5000); // Random between 0 to 5 seconds
         setTimeout(() => {
             flashCatImage();
             randomFlashInterval(); // Schedule the next flash
